@@ -4,21 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>DyCenRIG: Dynamic Consensus for Robotic Information Gathering</title>
+    <title>DyConRIG: Dynamic Consensus for Robotic Information Gathering</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
 
     <!-- Open Graph and Twitter Card Meta Tags -->
-    <meta property="og:site_name" content="DyCenRIG" />
-    <meta property="og:title" content="DyCenRIG: Dynamic Consensus for Robotic Information Gathering" />
+    <meta property="og:site_name" content="DyConRIG" />
+    <meta property="og:title" content="DyConRIG: Dynamic Consensus for Robotic Information Gathering" />
     <meta property="og:description" content="A distributed multi-robot information gathering system using consensus-based control for efficient environmental mapping." />
     <meta property="og:url" content="https://yourwebsite.com" />
     <meta property="og:image" content="https://yourwebsite.com/assets/trajectories.png" />
 
     <meta property="article:publisher" content="https://yourwebsite.com" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="DyCenRIG" />
+    <meta name="twitter:title" content="DyConRIG" />
     <meta name="twitter:description" content="A distributed multi-robot information gathering system using consensus-based control for efficient environmental mapping." />
     <meta name="twitter:url" content="https://yourwebsite.com" />
     <meta name="twitter:image" content="https://yourwebsite.com/assets/trajectories.png" />
@@ -37,8 +37,8 @@
                 DyConRIG is a distributed multi-robot information gathering system that employs a consensus-based control strategy to efficiently map environmental fields. By integrating a modified Hegselmann-Krause model, it enables robots to balance local and shared information, prioritizing uncertainty-driven sampling of informative locations. Validated through simulations and real-world experiments, DyConRIG achieves robust, scalable, and efficient environmental monitoring with asynchronous robot coordination.
             </p>
             <div class="d-flex justify-content-center flex-wrap">
-                <img src="assets/trajectories.png" alt="DyCenRIG Trajectories" class="img-fluid" style="max-width: 300px; margin: 10px;" />
-                <img src="assets/env_map.png" alt="Environment Map" class="img-fluid" style="max-width: 300px; margin: 10px;" />
+                <img src="assets/trajectories.png" alt="DyConRIG Trajectories" class="img-fluid" style="max-width: 300px; margin: 10px;" />
+                <img src="assets/temp_map.png" alt="Environment Map" class="img-fluid" style="max-width: 300px; margin: 10px;" />
             </div>
             <div class="mt-4">
                 <a class="btn btn-primary mr-2" href="assets/dycenrig.pdf" target="_blank">
@@ -82,23 +82,28 @@
         <h1>Autonomous Surface Vehicle Experiments</h1>
         <div class="row">
             <div class="col-md-12">
-                <p>The DyCenRIG system was implemented for Autonomous Surface Vehicles (ASVs) to map temperature fields in a 2D aquatic environment. Experiments were conducted across eight distinct environments, with robots modeled as 5D state vectors (position, orientation, linear and angular velocities). DyCenRIG successfully generated online temperature maps while avoiding inter-vehicle collisions, validated through both simulations and real-world tests.</p>
+                <p>The DyConRIG system was implemented for Autonomous Surface Vehicles (ASVs) to map temperature fields in a 2D aquatic environment. Experiments were conducted across eight distinct environments, with robots modeled as 5D state vectors (position, orientation, linear and angular velocities). DyConRIG successfully generated online temperature maps while avoiding inter-vehicle collisions, validated through both simulations and real-world tests.</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 d-flex flex-nowrap overflow-auto">
-                <img src="assets/env_n17e073.png" alt="Environment N17E073" class="img-fluid" style="width: 20%; margin-right: 5px;" />
-                <img src="assets/env_n18e045.png" alt="Environment N18E045" class="img-fluid" style="width: 20%; margin-right: 5px;" />
-                <img src="assets/env_n35w107.png" alt="Environment N35W107" class="img-fluid" style="width: 20%; margin-right: 5px;" />
-                <img src="assets/env_n42e054.png" alt="Environment N42E054" class="img-fluid" style="width: 20%; margin-right: 5px;" />
-                <img src="assets/env_n43w080.png" alt="Environment N43W080" class="img-fluid" style="width: 20%;" />
+            <div class="col-md-12 d-flex flex-wrap justify-content-between">
+                <img src="assets/n17e073_with_path.png" alt="Environment N17E073" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n18e045_with_path.png" alt="Environment N18E045" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n35w107_with_path.png" alt="Environment N35W107" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n42e054_with_path.png" alt="Environment N42E054" class="img-fluid" style="width: 20%; margin-bottom: 10px;" />
             </div>
-            <div class="col-md-12 text-center mt-2"><em>Five of eight simulated environments for ASVs: Blue dots (robot positions), white paths (trajectories).</em></div>
+            <div class="col-md-12 d-flex flex-wrap justify-content-between">
+                <img src="assets/n43w080_with_path.png" alt="Environment N43W080" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n44w111_with_path.png" alt="Environment N44W111" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n45w123_with_path.png" alt="Environment N45W123" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n47w124_with_path.png" alt="Environment N47W124" class="img-fluid" style="width: 20%; margin-bottom: 10px;" />
+            </div>
+            <div class="col-md-12 text-center mt-2"><em>All eight simulated environments for ASVs: Blue dots (robot positions), white paths (trajectories).</em></div>
         </div>
         <div class="row mt-4">
             <div class="col-md-12">
                 <video controls style="width: 60%; max-width: 600px; display: block; margin: 0 auto;">
-                    <source src="videos/sim_asv.mp4" type="video/mp4">
+                    <source src="videos/Simulation_rig_web.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -108,7 +113,7 @@
         <div class="row mt-4">
             <div class="col-md-12">
                 <video controls style="width: 60%; max-width: 600px; display: block; margin: 0 auto;">
-                    <source src="videos/exp_asv.mp4" type="video/mp4">
+                    <source src="videos/dyconrig_physical_web.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
