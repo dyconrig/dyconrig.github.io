@@ -82,42 +82,42 @@
         <h1>Autonomous Surface Vehicle Experiments</h1>
         <div class="row">
             <div class="col-md-12">
-                <p>The DyConRIG system was implemented for Autonomous Surface Vehicles (ASVs) to map temperature fields in a 2D aquatic environment. Experiments were conducted across eight distinct environments, with robots modeled as 5D state vectors (position, orientation, linear and angular velocities). DyConRIG successfully generated online temperature maps while avoiding inter-vehicle collisions, validated through both simulations and real-world tests.</p>
+                <p>The DyConRIG system was implemented for robots to map scalar fields in 2D environments. Simulations were conducted across eight distinct non-aquatic environments using NASA SRTM elevation maps to predict elevation, while physical experiments mapped water temperature in a controlled aquatic lake with ASVs(Autonomous Surface Vehicle). Robots were modeled as 5D state vectors (position, orientation, linear and angular velocities). DyConRIG successfully generated online maps while avoiding inter-vehicle collisions, validated through extensive simulations and real-world ASV deployments.</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12 d-flex flex-wrap justify-content-between">
-                <img src="assets/n17e073_with_path.png" alt="Environment N17E073" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
-                <img src="assets/n18e045_with_path.png" alt="Environment N18E045" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
-                <img src="assets/n35w107_with_path.png" alt="Environment N35W107" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
-                <img src="assets/n42e054_with_path.png" alt="Environment N42E054" class="img-fluid" style="width: 20%; margin-bottom: 10px;" />
+                <img src="assets/n17e073_with_path.png" alt="Simulated Elevation Mapping in N17E073" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n18e045_with_path.png" alt="Simulated Elevation Mapping in N18E045" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n35w107_with_path.png" alt="Simulated Elevation Mapping in N35W107" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n42e054_with_path.png" alt="Simulated Elevation Mapping in N42E054" class="img-fluid" style="width: 20%; margin-bottom: 10px;" />
             </div>
             <div class="col-md-12 d-flex flex-wrap justify-content-between">
-                <img src="assets/n43w080_with_path.png" alt="Environment N43W080" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
-                <img src="assets/n44w111_with_path.png" alt="Environment N44W111" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
-                <img src="assets/n45w123_with_path.png" alt="Environment N45W123" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
-                <img src="assets/n47w124_with_path.png" alt="Environment N47W124" class="img-fluid" style="width: 20%; margin-bottom: 10px;" />
+                <img src="assets/n43w080_with_path.png" alt="Simulated Elevation Mapping in N43W080" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n44w111_with_path.png" alt="Simulated Elevation Mapping in N44W111" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n45w123_with_path.png" alt="Simulated Elevation Mapping in N45W123" class="img-fluid" style="width: 20%; margin-right: 5px; margin-bottom: 10px;" />
+                <img src="assets/n47w124_with_path.png" alt="Simulated Elevation Mapping in N47W124" class="img-fluid" style="width: 20%; margin-bottom: 10px;" />
             </div>
-            <div class="col-md-12 text-center mt-2"><em>All eight simulated environments for ASVs: Blue dots (robot positions), white paths (trajectories).</em></div>
+            <div class="col-md-12 text-center mt-2"><em>Simulated NASA SRTM environments for elevation mapping: Cyan dots represent robot 1 paths, pink dots represent robot 2 paths, brown dots represent robot 3 paths.</em></div>
         </div>
         <div class="row mt-4">
             <div class="col-md-12">
-                <video controls style="width: 60%; max-width: 600px; display: block; margin: 0 auto;">
+                <video controls style="width: 90%; max-width: 600px; display: block; margin: 0 auto;">
                     <source src="videos/Simulation_rig_web.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="col-md-12 text-center mt-2"><em>DyCenRIG performance in a simulated ASV environment mapping temperature fields.</em></div>
+            <div class="col-md-12 text-center mt-2"><em>DyConRIG simulation of robots mapping elevation in a 20 × 20-meter workspace across eight SRTM-based environments, with collision-free navigation; cyan dots show robot 1 path, pink dots show robot 2 path, brown dots show robot 3 path.</em></div>
             <div class="col-md-12" style="margin-bottom: 20px;"></div>
         </div>
         <div class="row mt-4">
             <div class="col-md-12">
-                <video controls style="width: 60%; max-width: 600px; display: block; margin: 0 auto;">
+                <video controls style="width: 90%; max-width: 600px; display: block; margin: 0 auto;">
                     <source src="videos/dyconrig_physical_web.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="col-md-12 text-center mt-2"><em>Real-world ASV navigation and temperature mapping using DyConRIG.</em></div>
+            <div class="col-md-12 text-center mt-2"><em>Real-world DyConRIG deployment of three ASVs mapping water temperature in a 28 × 28 meter lake at FIU’s MMC Campus, with collision-free navigation.</em></div>
             <div class="col-md-12" style="margin-bottom: 20px;"></div>
         </div>
         <hr class="my-5" />
@@ -126,7 +126,7 @@
     <h1>Benchmark Results</h1>
     <div class="row">
         <div class="col-md-12">
-            <p>DyConRIG was benchmarked using the Probabilistic Online Active Mapping (POAM) method across eight environments (N17E073, N18E045, N35W107, N42E054, N43W080, N44W111, N45W123 stipend N47W124) with varying terrain complexities from NASA's Shuttle Radar Topography Mission (SRTM) elevation maps. Performance was evaluated using Standardized Mean Squared Error (SMSE), Mean Standardized Log Loss (MSLL), Negative Log Predictive Density (NLPD), and Root Mean Square Error (RMSE). The Hegselmann-Krause (HK) Consensus planner with POAM outperformed other methods, achieving robust performance (e.g., RMSE 8.88 ± 2.26 in N43W080 with α=0.3). The stubbornness parameter (α) was optimized by selecting values with the lowest upper confidence bound (mean + standard deviation) for RMSE, ensuring robust performance across diverse terrains. An analysis of team size (3, 4, 5 robots) in N43W080 further demonstrated that smaller teams (e.g., 3 robots) often achieved superior performance due to reduced coordination overhead, with results evaluated using the upper confidence bound.</p>
+            <p>DyConRIG was benchmarked using the Probabilistic Online Attentive Mapping (POAM) method across eight environments (N17E073, N18E045, N35W107, N42E054, N43W080, N44W111, N45W123 and N47W124) with varying terrain complexities from NASA's Shuttle Radar Topography Mission (SRTM) elevation maps. Performance was evaluated using Standardized Mean Squared Error (SMSE), Mean Standardized Log Loss (MSLL), Negative Log Predictive Density (NLPD), and Root Mean Square Error (RMSE). The Hegselmann-Krause (HK) Consensus planner with POAM outperformed other methods, achieving robust performance. The stubbornness parameter (α) was optimized by selecting values with the lowest upper confidence bound (mean + standard deviation), ensuring robust performance across diverse terrains. An analysis of team size (3, 4, 5 robots) in N43W080 further demonstrated that smaller teams (e.g., 3 robots) often achieved superior performance due to reduced coordination overhead, with results evaluated using the upper confidence bound.</p>
         </div>
     </div>
     <div class="row">
@@ -212,7 +212,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="text-center mt-2"><em>Performance metrics for DyConRIG using the POAM method across eight environments. Lower values indicate better performance. Each metric is reported as Mean ± Std across 10 independent trials, with α selected based on the lowest upper confidence bound (mean + standard deviation) for RMSE where applicable.</em></div>
+            <div class="text-center mt-2"><em>Performance metrics for DyConRIG using the POAM method across eight environments. Lower values indicate better performance. Each metric is reported as Mean ± Std across 10 independent trials, with α selected based on the lowest upper confidence bound (mean + standard deviation).</em></div>
         </div>
     </div>
     <div class="row mt-4">
