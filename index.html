@@ -122,100 +122,146 @@
         </div>
         <hr class="my-5" />
 
-        <!-- SECTION: Benchmark Results -->
-        <h1>Benchmark Results</h1>
-        <div class="row">
-            <div class="col-md-12">
-                <p>DyConRIG was benchmarked across eight environments (N17E073, N18E045, N35W107, N42E054, N43W080, N44W111, N45W123, N47W124) with varying terrain complexities. Performance was evaluated using Standardized Mean Squared Error (SMSE), Mean Standardized Log Loss (MSLL), Negative Log Predictive Density (NLPD), and Root Mean Square Error (RMSE). DyCenRIG's HK Consensus planner outperformed the Average Consensus Planner, achieving lower RMSE (e.g., 8.88 ± 2.26 in N43W080) and stable performance across sample sizes (580–660).</p>
-            </div>
+    <!-- SECTION: Benchmark Results -->
+    <h1>Benchmark Results</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <p>DyConRIG was benchmarked using the Probabilistic Online Active Mapping (POAM) method across eight environments (N17E073, N18E045, N35W107, N42E054, N43W080, N44W111, N45W123 stipend N47W124) with varying terrain complexities from NASA's Shuttle Radar Topography Mission (SRTM) elevation maps. Performance was evaluated using Standardized Mean Squared Error (SMSE), Mean Standardized Log Loss (MSLL), Negative Log Predictive Density (NLPD), and Root Mean Square Error (RMSE). The Hegselmann-Krause (HK) Consensus planner with POAM outperformed other methods, achieving robust performance (e.g., RMSE 8.88 ± 2.26 in N43W080 with α=0.3). The stubbornness parameter (α) was optimized by selecting values with the lowest upper confidence bound (mean + standard deviation) for RMSE, ensuring robust performance across diverse terrains. An analysis of team size (3, 4, 5 robots) in N43W080 further demonstrated that smaller teams (e.g., 3 robots) often achieved superior performance due to reduced coordination overhead, with results evaluated using the upper confidence bound.</p>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div style="overflow-x: auto;">
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th><strong>Env</strong></th>
-                                <th><strong>α</strong></th>
-                                <th><strong>SMSE</strong></th>
-                                <th><strong>MSLL</strong></th>
-                                <th><strong>NLPD</strong></th>
-                                <th><strong>RMSE</strong></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>N17E073</td>
-                                <td>1.0</td>
-                                <td>0.0852 ± 0.0361</td>
-                                <td>-1.29 ± 0.47</td>
-                                <td>4.38 ± 0.42</td>
-                                <td>18.51 ± 3.71</td>
-                            </tr>
-                            <tr>
-                                <td>N18E045</td>
-                                <td>0.5</td>
-                                <td>0.0716 ± 0.0223</td>
-                                <td>-1.36 ± 0.25</td>
-                                <td>3.90 ± 0.24</td>
-                                <td>12.08 ± 1.89</td>
-                            </tr>
-                            <tr>
-                                <td>N35W107</td>
-                                <td>0.2</td>
-                                <td>0.0512 ± 0.0113</td>
-                                <td>-1.64 ± 0.11</td>
-                                <td>3.62 ± 0.10</td>
-                                <td>9.93 ± 1.03</td>
-                            </tr>
-                            <tr>
-                                <td>N42E054</td>
-                                <td>0.8</td>
-                                <td>0.0566 ± 0.0606</td>
-                                <td>-1.40 ± 0.59</td>
-                                <td>4.02 ± 0.55</td>
-                                <td>10.90 ± 5.41</td>
-                            </tr>
-                            <tr>
-                                <td>N43W080</td>
-                                <td>0.3</td>
-                                <td>0.0308 ± 0.0176</td>
-                                <td>-1.85 ± 0.38</td>
-                                <td>3.58 ± 0.37</td>
-                                <td>8.88 ± 2.26</td>
-                            </tr>
-                            <tr>
-                                <td>N44W111</td>
-                                <td>0.5</td>
-                                <td>0.3225 ± 0.1149</td>
-                                <td>-0.70 ± 0.19</td>
-                                <td>4.29 ± 0.19</td>
-                                <td>18.99 ± 3.18</td>
-                            </tr>
-                            <tr>
-                                <td>N45W123</td>
-                                <td>0.4</td>
-                                <td>0.0933 ± 0.0310</td>
-                                <td>-1.32 ± 0.30</td>
-                                <td>4.17 ± 0.29</td>
-                                <td>15.80 ± 2.53</td>
-                            </tr>
-                            <tr>
-                                <td>N47W124</td>
-                                <td>0.7</td>
-                                <td>0.154 ± 0.047</td>
-                                <td>-1.06 ± 0.34</td>
-                                <td>4.49 ± 0.30</td>
-                                <td>22.44 ± 3.25</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="text-center mt-2"><em>Performance metrics for DyConRIG across eight environments. Lower values indicate better performance.</em></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div style="overflow-x: auto;">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th><strong>Env</strong></th>
+                            <th><strong>α</strong></th>
+                            <th><strong>SMSE</strong></th>
+                            <th><strong>MSLL</strong></th>
+                            <th><strong>NLPD</strong></th>
+                            <th><strong>RMSE</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>N17E073</td>
+                            <td>0.2</td>
+                            <td>0.0876 ± 0.0228</td>
+                            <td>-1.38 ± 0.28</td>
+                            <td>4.30 ± 0.24</td>
+                            <td>18.74 ± 2.59</td>
+                        </tr>
+                        <tr>
+                            <td>N18E045</td>
+                            <td>0.5</td>
+                            <td>0.0716 ± 0.0223</td>
+                            <td>-1.36 ± 0.25</td>
+                            <td>3.90 ± 0.24</td>
+                            <td>12.08 ± 1.89</td>
+                        </tr>
+                        <tr>
+                            <td>N35W107</td>
+                            <td>0.2</td>
+                            <td>0.0512 ± 0.0113</td>
+                            <td>-1.64 ± 0.11</td>
+                            <td>3.62 ± 0.10</td>
+                            <td>9.93 ± 1.03</td>
+                        </tr>
+                        <tr>
+                            <td>N42E054</td>
+                            <td>0.6</td>
+                            <td>0.0571 ± 0.0284</td>
+                            <td>-1.65 ± 0.67</td>
+                            <td>3.78 ± 0.64</td>
+                            <td>11.85 ± 2.98</td>
+                        </tr>
+                        <tr>
+                            <td>N43W080</td>
+                            <td>0.3</td>
+                            <td>0.0308 ± 0.0176</td>
+                            <td>-1.85 ± 0.38</td>
+                            <td>3.58 ± 0.37</td>
+                            <td>8.88 ± 2.26</td>
+                        </tr>
+                        <tr>
+                            <td>N44W111</td>
+                            <td>0.2</td>
+                            <td>0.3344 ± 0.0873</td>
+                            <td>-0.70 ± 0.14</td>
+                            <td>4.28 ± 0.13</td>
+                            <td>19.45 ± 2.52</td>
+                        </tr>
+                        <tr>
+                            <td>N45W123</td>
+                            <td>0.4</td>
+                            <td>0.0933 ± 0.0310</td>
+                            <NUMBERED>
+                            <td>-1.32 ± 0.30</td>
+                            <td>4.17 ± 0.29</td>
+                            <td>15.80 ± 2.53</td>
+                        </tr>
+                        <tr>
+                            <td>N47W124</td>
+                            <td>0.5</td>
+                            <td>0.1564 ± 0.0394</td>
+                            <td>-1.03 ± 0.28</td>
+                            <td>4.49 ± 0.25</td>
+                            <td>22.69 ± 2.76</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="text-center mt-2"><em>Performance metrics for DyConRIG using the POAM method across eight environments. Lower values indicate better performance. Each metric is reported as Mean ± Std across 10 independent trials, with α selected based on the lowest upper confidence bound (mean + standard deviation) for RMSE where applicable.</em></div>
         </div>
-        <hr class="my-5" />
-
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h3>Team Size Analysis in N43W080</h3>
+            <div style="overflow-x: auto;">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th><strong>Robots</strong></th>
+                            <th><strong>SMSE</strong></th>
+                            <th><strong>MSLL</strong></th>
+                            <th><strong>NLPD</strong></th>
+                            <th><strong>RMSE</strong></th>
+                            <th><strong>MAE</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>0.094 ± 0.089</td>
+                            <td><strong>-1.265 ± 0.665</strong></td>
+                            <td><strong>4.152 ± 0.649</strong></td>
+                            <td><strong>14.227 ± 7.223</strong></td>
+                            <td><strong>14.227 ± 7.223</strong></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>0.148 ± 0.096</td>
+                            <td>-0.940 ± 0.556</td>
+                            <td>4.476 ± 0.538</td>
+                            <td>18.670 ± 7.370</td>
+                            <td>18.670 ± 7.370</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>0.105 ± 0.073</strong></td>
+                            <td>-0.960 ± 0.437</td>
+                            <td>4.438 ± 0.434</td>
+                            <td>15.803 ± 6.092</td>
+                            <td>15.803 ± 6.092</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center mt-2"><em>Performance metrics for DyConRIG using POAM in N43W080 with α=0.9 for 3, 4, and 5 robots. Each metric is reported as Mean ± Std across 10 independent trials. Bold values indicate the best upper confidence bound (lowest mean + standard deviation) for each metric.</em></div>
+        </div>
+    </div>
+    <hr class="my-5" />
         <!-- SECTION: Authors -->
         <h1>Authors</h1>
         <div class="row">
